@@ -3,9 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>contato</title>
+    <link rel="stylesheet" href="css/contato.css">
 </head>
 <body>
-    
+    <header id="topo">
+        <h1>Tradição e Excelência em cada Detalhe</h1>
+    </header>  
+    <nav>  
+        <h2>Onde nos encontrar</h2>
+    </nav>
+     <section>  
+        <article>
+            <ul>
+                <li><h3>Nossa Casa Física</h3></li>
+                <p>Localizada em São Paulo, somos uma empresa familiar onde a paixão pelo vinho atravessa gerações.</p>
+                <li><h3>Experiência Sensorial</h3></li>
+                <p>Visite nossa loja para percorrer as prateleiras e bancadas, explorando rótulos que despertam curiosidade e novas descobertas.</p>
+        </article>    
+         <article>   
+            </ul>
+            <h2>Canais de Atendimento e Consultoria</h2>
+            <table border="1" width="100%" cellpadding="15">
+                <thead>
+                    <tr>
+                        <th>Tipo de Contato</th>
+                        <th>Detalhes do Atendimento</th>
+                        <th>Responsáveis Disponíveis</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Loja Física</strong></td>
+                        <td>Estabelecimento localizado em São Paulo, atuando no mercado há mais de 15 anos.</td>
+                        <td>Sr. Giulio, Bianca e equipe de 6 funcionários.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Consultoria Especializada</strong></td>
+                        <td>Orientações sobre tipos de uva, regiões, vinícolas, rótulos e harmonizações com alimentos.</td>
+                        <td>3 vendedores com profundo conhecimento técnico.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Canal de E-commerce</strong></td>
+                        <td>Portal em desenvolvimento para levar a experiência personalizada da loja física ao mundo digital.</td>
+                        <td>Bianca, atuando como Product Owner (PO) do projeto.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Suporte Administrativo</strong></td>
+                        <td>Gestão financeira, compras e controle de estoques via software integrado.</td>
+                        <td>Setores de administração e estoque da vinheria.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+        <article>
+            <br>
+            <img src="imagens_contato/contato1.jpg" alt="contato presnecial">
+            <img src="imagens_contato/contato2.jpg" alt="contato especializado">
+            <img src="imagens_contato/contato3.jpg" alt="Contato com o cliente">
+            <img src="imagens_contato/contato4.jpg" alt="Suporte administrativo">
+        </article>
+        <article>
+            <form action="">
+            <h3>Cadrasto pessoal para trabalhar conosco</h3>
+
+            <p>Informe seu nome e email: </p>
+            <label for="nome_email">Nome e Email:</label>
+            <input type="text" name = "nome_email" placeholder="Nome Email">
+
+            <p>Selecione seu gênero</p>
+            <input type="radio" name = "genero" value="M">
+            <label for="genero">Masculino</label><br>
+            <input type="radio" name = "genero" value="F">
+            <label for="">Feminino</label><br>
+            <input type="radio" name = "genero" value="O">
+            <label for="radio">Outros</label><br>
+
+            <p>Selecione qual área de trabalho pode atuar:</p>
+            <input type="radio" name = "area" value = "atendente">
+            <label for="area">atendente</label>
+            <input type="radio" name = "area" value = "consultoria">
+            <label for="area">consultoria</label>
+            <input type="radio" name = "area" value = "suporte">
+            <label for="area">suporte</label>
+            <input type="radio" name = "area" value = "E-commerce">
+            <label for="area">E-commerce</label>
+            <p>Selecione tempo de esperiencia: </p>
+            <select name="tempo">
+                <option value="MT">Mais de 5 anos</option>
+                <option value="T">2 até 5 anos</option>
+                <option value="PT">Menos de 2 anos</option>
+            </select>
+        </article>
+    </section>
+     <footer>
+        <h4>Nos mande uma mensagem!</h4>
+        <textarea name="mensagem" placeholder="Mensagem..."></textarea>
+        <br><br>
+
+        <fieldset>
+            <legend>Confirme antes de enviar os dados</legend>
+            <input type="checkbox" name ="confirmacao" value = "ok" required>
+            <label for="confirmacao">Confirmo tudo!</label>
+
+        </fieldset>
+        <br>
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpar</button>
+        <ul class="menu">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="historia.html">História</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+        </ul>
+        <a href="#topo"id="Voltar topo">Voltar para o topo</a> 
+    </footer>  
 </body>
 </html>
