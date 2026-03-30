@@ -1,0 +1,149 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #fdfaf9;
+    color: #333;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+.topo {
+    background-color: #4a0e0e;
+    color: white;
+    padding: 20px 0;
+    margin-bottom: 40px;
+}
+
+.topo .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.menu a {
+    color: #d4a373;
+}
+
+
+.bloco-conteudo {
+    background-color: #fff;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+h2, h3, h4 {
+    color: #4a0e0e;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+.galeria {
+    display: grid;
+    
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.galeria img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; 
+    border-radius: 5px;
+    transition: transform 0.4s ease, filter 0.4s ease;
+    cursor: pointer;
+    border: 1px solid #eee;
+}
+
+
+.galeria img:hover {
+    transform: scale(1.03);
+    filter: brightness(1.1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+}
+
+ul li {
+    background: #fdf2f2;
+    color: #4a0e0e;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    border: 1px solid #4a0e0e;
+}
+
+
+.voltar-topo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4a0e0e;
+    color: white;
+    padding: 12px 18px;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    z-index: 100;
+    transition: 0.3s;
+}
+
+.voltar-topo:hover {
+    background-color: #722f37;
+}
+
+
+@media (max-width: 768px) {
+    .topo .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .galeria {
+        grid-template-columns: 1fr; 
+    }
+    
+    .bloco-conteudo {
+        padding: 15px;
+    }
+}
