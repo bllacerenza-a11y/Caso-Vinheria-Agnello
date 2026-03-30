@@ -40,7 +40,7 @@ O site é composto por 5 páginas principais:
 - **Consultoria Técnica:** Seções informativas sobre *terroir*, castas e harmonização.
 
 ## 🚀 Como Visualizar
-Para rodar o projeto localmente:
+Para rodar o projeto localmente: https://bllacerenza-a11y.github.io/Caso-Vinheria-Agnello/index.html
 1. Faça o clone do repositório:
    ```bash
    git clone [https://github.com/bllacerenza-a11y/Caso-Vinheria-Agnello.git](https://github.com/bllacerenza-a11y/Caso-Vinheria-Agnello.git)
