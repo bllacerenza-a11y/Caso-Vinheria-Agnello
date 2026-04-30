@@ -1,0 +1,244 @@
+/* ============================================================
+   efeitos.css – Check-Point 02 | Vinheria Agnello
+   Pseudo-classes, Pseudo-elementos, Animações, Transições
+   e Transformações CSS
+   ============================================================ */
+
+/* ─────────────────────────────────────────────
+   @KEYFRAMES – Animações
+   ───────────────────────────────────────────── */
+
+/* Animação 1: Fade-in + slide-up para o banner principal */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animação 2: Pulsar suave para o botão CTA */
+@keyframes pulsarBotao {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(139, 0, 0, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(139, 0, 0, 0);
+  }
+}
+
+/* Animação 3: Giro contínuo leve em ícone decorativo */
+@keyframes girarLeve {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ─────────────────────────────────────────────
+   PSEUDO-ELEMENTOS
+   ───────────────────────────────────────────── */
+
+/* ::before – Linha decorativa bordô antes dos títulos de seção */
+h2::before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #8b0000;
+  margin-bottom: 8px;
+  border-radius: 2px;
+}
+
+/* ::after – Ornamento decorativo após o logo/nome da vinheria no header */
+header h1::after,
+header .logo::after {
+  content: " 🍷";
+  font-size: 0.85em;
+  vertical-align: middle;
+}
+
+/* ::first-letter – Destaque na primeira letra dos parágrafos de abertura */
+main > section:first-of-type p:first-of-type::first-letter {
+  font-size: 2.2em;
+  font-weight: bold;
+  color: #8b0000;
+  float: left;
+  line-height: 1;
+  margin-right: 4px;
+}
+
+/* ::selection – Estilo de texto selecionado pelo usuário */
+::selection {
+  background-color: #8b0000;
+  color: #f5f0e8;
+}
+
+/* ─────────────────────────────────────────────
+   PSEUDO-CLASSES
+   ───────────────────────────────────────────── */
+
+/* :hover – Links da navegação com sublinhado animado */
+nav a:hover {
+  color: #8b0000;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: color 0.3s ease, text-underline-offset 0.3s ease;
+}
+
+/* :focus – Campos de formulário com destaque de borda ao focar */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #8b0000;
+  box-shadow: 0 0 0 3px rgba(139, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* :nth-child – Destaque alternado nos itens de lista de diferenciais */
+ul li:nth-child(odd) {
+  background-color: rgba(139, 0, 0, 0.06);
+  border-left: 3px solid #8b0000;
+  padding-left: 8px;
+  border-radius: 2px;
+}
+
+/* :not – Aplica espaçamento em todos os parágrafos exceto o último */
+p:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+/* :checked – Estilo visual para checkboxes/radios marcados no formulário */
+input[type="checkbox"]:checked + label,
+input[type="radio"]:checked + label {
+  color: #8b0000;
+  font-weight: bold;
+}
+
+/* ─────────────────────────────────────────────
+   TRANSIÇÕES
+   ───────────────────────────────────────────── */
+
+/* Botão principal (CTA) – transição de cor, sombra e escala */
+a.btn,
+button,
+input[type="submit"] {
+  transition: background-color 0.3s ease, color 0.3s ease,
+    box-shadow 0.3s ease, transform 0.2s ease;
+  animation: pulsarBotao 2.5s infinite;
+}
+
+a.btn:hover,
+button:hover,
+input[type="submit"]:hover {
+  background-color: #6b0000;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(139, 0, 0, 0.35);
+  animation: none; /* para o pulsar ao fazer hover */
+}
+
+/* Cards de produto – transição de sombra e elevação */
+.produto,
+.card,
+article {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produto:hover,
+.card:hover,
+article:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+/* Imagens na galeria – transição de escala e brilho */
+.galeria img,
+.imgs-galeria img {
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.galeria img:hover,
+.imgs-galeria img:hover {
+  transform: scale(1.08);
+  filter: brightness(1.1);
+}
+
+/* Links gerais */
+a {
+  transition: color 0.25s ease, opacity 0.25s ease;
+}
+
+a:hover {
+  opacity: 0.85;
+}
+
+/* ─────────────────────────────────────────────
+   TRANSFORMAÇÕES
+   ───────────────────────────────────────────── */
+
+/* Transformação 1: Banner/hero da página inicial – fade + slide-up */
+header img,
+.hero img,
+.banner img {
+  animation: fadeSlideUp 0.9s ease both;
+}
+
+/* Transformação 2: Imagens de história – leve rotação decorativa */
+.historia img,
+.imgs-historia img {
+  transform: rotate(-2deg);
+  transition: transform 0.4s ease;
+}
+
+.historia img:hover,
+.imgs-historia img:hover {
+  transform: rotate(0deg) scale(1.04);
+}
+
+/* Transformação 3: Ícones/imagens de contato – escala ao hover */
+.contato img,
+.imagens-contato img {
+  transition: transform 0.3s ease;
+}
+
+.contato img:hover,
+.imagens-contato img:hover {
+  transform: scale(1.12);
+}
+
+/* Transformação 4: Itens do menu – translate sutil para cima no hover */
+nav ul li {
+  transition: transform 0.2s ease;
+}
+
+nav ul li:hover {
+  transform: translateY(-3px);
+}
+
+/* ─────────────────────────────────────────────
+   ANIMAÇÃO DE ENTRADA DE CONTEÚDO
+   ───────────────────────────────────────────── */
+
+main > section {
+  animation: fadeSlideUp 0.7s ease both;
+}
+
+main > section:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+main > section:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+main > section:nth-child(4) {
+  animation-delay: 0.45s;
+}
